@@ -13,8 +13,9 @@ entity Products : cuid, managed {
         Description : String(255);
         PictureURL  : String;
         Rating      : Decimal(2, 2);
-        Price       : Decimal(10, 2);
-        Currency    : String;
+        Criticality : Int16;
+        Price       : Decimal(10, 2) @Measures.ISOCurrency: Currency;
+        Currency    : String         @Common.IsCurrency;
         Category    : Association to VH_Categories; // Almacena el ID de la categoria
         SubCategory : Association to VH_Subcategories; //Almacena el ID de la subcategoria
         Supplier    : Association to Suppliers; // Almacena el ID del proveedor

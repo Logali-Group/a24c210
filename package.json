@@ -6,11 +6,21 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "@sap/cds": "^7.9.0",
+    "@sap/cds": "^7.9.1",
     "express": "^4.19.2"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^1.7.0"
+  },
+  "cds":{
+    "requires": {
+      "db":{
+        "kind": "sqlite",
+        "credentials": {
+          "database": "db.sqlite"
+        }
+      }
+    }
   },
   "scripts": {
     "start": "cds-serve"

@@ -1,0 +1,8 @@
+List Report Page
+
+namespace com.sap.vocabularies.UI.v1
+
+Filtros --> @UI.SelectionFields
+Tabla   --> @UI.LineItem
+Valor Unidad  (Price / Moneda) --> Price @Measures.ISOCurrency: Currency / Currency @Common.IsCurrency
+Rating --> @UI.DataPoint
