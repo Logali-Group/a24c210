@@ -1,3 +1,3 @@
-ID;SupplierName;WebAddress;Contact_ID
-4cc5a85c-89cf-41dd-ab0f-e3ed9ff03395;SupplierName2431;WebAddress3228;d40e4b74-04c2-4352-b7e1-dc41cbcf4006
-4d059c61-b3c0-4248-9c21-7ae0ccd3c6c5;SupplierName4396;WebAddress6206;d40e4b74-04c2-4352-b7e1-dc41cbcf4006
+ID;SupplierName;WebAddress;Contact_ID;Supplier
+4cc5a85c-89cf-41dd-ab0f-e3ed9ff03395;Panorama Studios;Panorama Studioshttp://www.panorama-studios.biz;d40e4b74-04c2-4352-b7e1-dc41cbcf4006;100000004
+4d059c61-b3c0-4248-9c21-7ae0ccd3c6c5;Supplier #2;WebAddress6206;d40e4b74-04c2-4352-b7e1-dc41cbcf4006;100000005

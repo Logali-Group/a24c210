@@ -9,7 +9,8 @@ using {
 type decimal : Decimal(4, 2);
 
 entity Products : cuid, managed {
-        Product     : String(100);
+        Product     : String(7);
+        ProductName : String(100);
         Description : String(255);
         PictureURL  : String;
         Rating      : Decimal(2, 2);
@@ -22,20 +23,32 @@ entity Products : cuid, managed {
         Statu       : Association to VH_Status; //Almacena el Code del statu
         ToDetails   : Composition of many Details
                               on ToDetails.Product = $self;
+        ToReviews   : Composition of many Reviews
+                              on ToReviews.Product = $self;
+};
+
+entity Reviews : cuid, managed {
+        Rating     : Decimal(2, 2);
+        Date       : Date;
+        User       : String(40);
+        ReviewText : String(255);
+        HelpFul    : String;
+        Product    : Association to Products; //ID del producto
 };
 
 entity Details : cuid {
-        Height       : decimal;
-        Width        : decimal;
-        Depth        : decimal;
-        Weight       : decimal;
-        UnitMeasure1 : String;
-        UnitMeasure2 : String;
-        BaseUnit     : String;
+        Height       : decimal @Measures.Unit: UnitMeasure1; //CM
+        Width        : decimal @Measures.Unit: UnitMeasure1; //CM
+        Depth        : decimal @Measures.Unit: UnitMeasure1; //CM
+        Weight       : decimal @Measures.Unit: UnitMeasure2; //KG
+        UnitMeasure1 : String  @Common.IsUnit;
+        UnitMeasure2 : String  @Common.IsUnit;
+        BaseUnit     : String  @Common.IsUnit;
         Product      : Association to Products; // Almacena el ID del producto
 };
 
 entity Suppliers : cuid {
+        Supplier     : String(10);
         SupplierName : String;
         WebAddress   : String;
         Contact      : Association to Contacts; //Almacena el ID de Contacto

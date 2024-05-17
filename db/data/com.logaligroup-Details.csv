@@ -1,1 +1,2 @@
-ID,Height,Width,Depth,Weight,UnitMeasure1,UnitMeasure2,BaseUnit,Product_ID
+ID;Height;Width;Depth;Weight;UnitMeasure1;UnitMeasure2;BaseUnit;Product_ID
+af71a850-a84b-4e20-a4e2-0be2b5bcfa7b;22.15;21.57;77.80;39.22;CM;KG;EA;1fc6b714-f285-4281-8f29-b1b06bd9dc20
