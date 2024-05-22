@@ -1,12 +1,11 @@
 ID;name;descr;Category_ID
-804cd3cd-b6ce-4954-8f7b-e72b50f52562;Subcategory #1;;e9cb7b5f-721a-48e0-8ceb-6196e0c8795c
-ab8f6b9d-313c-4c5f-ab78-97b49060bbd6;Subcategory #2;;48176d05-09b9-47a0-87a4-319c81705dc8
-b65f193e-5ee4-414b-985d-ea116a939dc0;name3711;descr3492;48176d05-09b9-47a0-87a4-319c81705dc8
-9c6c42a6-0d62-4722-83a7-fa820de9ebf3;name1142;descr1368;e9cb7b5f-721a-48e0-8ceb-6196e0c8795c
-37a03544-7a4e-4cb6-aeda-66e3c47e2d50;name6907;descr8866;e9cb7b5f-721a-48e0-8ceb-6196e0c8795c
-6e3e2a78-3917-49e7-a576-2b2f35a952ae;name6557;descr7348;48176d05-09b9-47a0-87a4-319c81705dc8
-4105b25d-ec47-4352-b55c-0d64f8bd2e1c;name4046;descr5054;48176d05-09b9-47a0-87a4-319c81705dc8
-beab61ce-6389-4f5e-b4f3-14dfd0e40db8;name306;descr5362;48176d05-09b9-47a0-87a4-319c81705dc8
-a73e7dfa-acbb-44b7-8629-5dfbe3a1afa3;name7697;descr2861;e9cb7b5f-721a-48e0-8ceb-6196e0c8795c
-dd952e5b-1677-4171-a263-7a2702703f70;name5496;descr7624;48176d05-09b9-47a0-87a4-319c81705dc8
-c4592e7f-8e7e-4c0c-b831-67987d7438e5;name1266;descr1715;48176d05-09b9-47a0-87a4-319c81705dc8
+a1b2c3d4-e5f6-7g8h-9i0j-1k2l3m4n5o6p;Smartphones;Mobile phones and accessories;1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p
+b2c3d4e5-f6g7-8h9i-0j1k-2l3m4n5o6p7q;Laptops;Personal and gaming laptops;1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p
+c3d4e5f6-g7h8-9i0j-1k2l-3m4n5o6p7q8r;Kitchen Appliances;Cooking and baking appliances;2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+d4e5f6g7-h8i9-0j1k-2l3m-4n5o6p7q8r9s;Furniture;Home and office furniture;2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+e5f6g7h8-i9j0-1k2l-3m4n-5o6p7q8r9s0t;Fiction;Novels and short stories;3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+f6g7h8i9-j0k1-2l3m-4n5o-6p7q8r9s0t1u;Non-fiction;Biographies and documentaries;3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+g7h8i9j0-k1l2-3m4n-5o6p-7q8r9s0t1u2v;Men's;Clothing	Men's shirts, pants, and suits;4d5e6f7g-8h9i-0j1k-2l3m-4n5o6p7q8r9s
+h8i9j0k1-l2m3-4n5o-6p7q-8r9s0t1u2v3w;Women's;Clothing	Women's dresses, skirts, and tops;4d5e6f7g-8h9i-0j1k-2l3m-4n5o6p7q8r9s
+i9j0k1l2-m3n4-5o6p-7q8r-9s0t1u2v3w4x;Outdoor Sports;Equipment for outdoor sports;5e6f7g8h-9i0j-1k2l-3m4n-5o6p7q8r9s0t
+j0k1l2m3-n4o5-6p7q-8r9s-0t1u2v3w4x5y;Indoor Sports;Equipment for indoor sports;5e6f7g8h-9i0j-1k2l-3m4n-5o6p7q8r9s0t

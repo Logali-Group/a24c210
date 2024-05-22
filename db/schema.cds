@@ -25,6 +25,8 @@ entity Products : cuid, managed {
                               on ToDetails.Product = $self;
         ToReviews   : Composition of many Reviews
                               on ToReviews.Product = $self;
+        ToInventory : Composition of many Inventory
+                              on ToInventory.Product = $self;
 };
 
 entity Reviews : cuid, managed {
@@ -36,15 +38,27 @@ entity Reviews : cuid, managed {
         Product    : Association to Products; //ID del producto
 };
 
+entity Inventory : cuid {
+        StockNumber : String;
+        Department  : Association to VH_Departments; // ID del departamento
+        Min         : Decimal(4, 2);
+        Max         : Decimal(4, 2);
+        Value       : Decimal(4, 2);
+        LotSize     : Decimal(4, 3) @Measures.Unit: UnitMeasure;
+        Quantity    : Decimal(4, 3) @Measures.Unit: UnitMeasure;
+        UnitMeasure : String        @Common.IsUnit;
+        Product     : Association to Products; // ID del producto
+};
+
 entity Details : cuid {
-        Height       : decimal @Measures.Unit: UnitMeasure1; //CM
-        Width        : decimal @Measures.Unit: UnitMeasure1; //CM
-        Depth        : decimal @Measures.Unit: UnitMeasure1; //CM
-        Weight       : decimal @Measures.Unit: UnitMeasure2; //KG
-        UnitMeasure1 : String  @Common.IsUnit;
-        UnitMeasure2 : String  @Common.IsUnit;
-        BaseUnit     : String  @Common.IsUnit;
-        Product      : Association to Products; // Almacena el ID del producto
+        Height     : decimal @Measures.Unit: UnitVolume; //CM
+        Width      : decimal @Measures.Unit: UnitVolume; //CM
+        Depth      : decimal @Measures.Unit: UnitVolume; //CM
+        Weight     : decimal @Measures.Unit: UnitMass; //KG
+        UnitVolume : String  @Common.IsUnit;
+        UnitMass   : String  @Common.IsUnit;
+        BaseUnit   : String  @Common.IsUnit;
+        Product    : Association to Products; // Almacena el ID del producto
 };
 
 entity Suppliers : cuid {
@@ -75,4 +89,8 @@ entity VH_Status : CodeList {
                     NotInStock     = 'Not In Stock';
                     LowAvalibility = 'Low Avalibility';
             };
+};
+
+entity VH_Departments : cuid {
+        name : String;
 };
