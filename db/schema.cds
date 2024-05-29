@@ -31,9 +31,9 @@ entity Products : cuid, managed {
 
 entity Reviews : cuid, managed {
         Rating     : Decimal(2, 2);
-        Date       : Date;
+        date       : Date;
         User       : String(40);
-        ReviewText : String(255);
+        ReviewText : LargeString;
         HelpFul    : String;
         Product    : Association to Products; //ID del producto
 };

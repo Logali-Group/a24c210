@@ -1,3 +1,16 @@
 {
-    
-}
+    "requires": {
+      "db": {
+        "[pg]": {
+          "kind": "postgres",
+          "credentials": {
+            "host": "159.65.96.144", 
+            "port": 8000,
+            "user": "jbriceno",
+            "password": "w8iu767q70a1",
+            "database": "products"
+          }
+        }
+      }
+    }
+  }

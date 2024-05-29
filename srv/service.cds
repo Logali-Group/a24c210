@@ -1,4 +1,5 @@
 using {com.logaligroup as call} from '../db/schema';
+using {API_BUSINESS_PARTNER as external} from './external/API_BUSINESS_PARTNER';
 
 service ProductService {
     entity ProductsSet         as projection on call.Products;
@@ -11,4 +12,17 @@ service ProductService {
     entity VH_SubcategoriesSet as projection on call.VH_Subcategories;
     entity VH_Status           as projection on call.VH_Status;
     entity VH_DepartmentsSet   as projection on call.VH_Departments;
+
+    entity BusinessPartner     as
+        projection on external.A_BusinessPartner {
+            key BusinessPartner,
+                FirstName,
+                LastName
+        } order by FirstName;
+
+
+    entity Supplier as projection on external.A_Supplier {
+        Supplier,
+        SupplierName
+    };
 };

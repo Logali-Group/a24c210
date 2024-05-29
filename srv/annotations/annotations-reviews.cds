@@ -2,9 +2,9 @@ using {ProductService as call} from '../service';
 
 annotate call.ReviewsSet with {
     Rating     @title: 'Rating';
-    Date       @title: 'Date';
+    date       @title: 'Date' @Common.FieldControl: #ReadOnly;
     User       @title: 'Users' @Common:{
-        Text : Date,
+        Text : date,
         TextArrangement : #TextLast,
     };
     ReviewText @title: 'Review Text';
@@ -16,6 +16,10 @@ annotate call.ReviewsSet with @(
         User
     ],
     UI.LineItem #Reviews : [
+        {
+            $Type : 'UI.DataField',
+            Value : date,
+        },
         {
             $Type : 'UI.DataFieldForAnnotation',
             Target : '@UI.DataPoint#Rating',
@@ -39,6 +43,38 @@ annotate call.ReviewsSet with @(
         {
             $Type : 'UI.DataField',
             Value : HelpFul,
+        },
+    ],
+    UI.FieldGroup  : {
+        $Type : 'UI.FieldGroupType',
+        Data : [
+            {
+                $Type : 'UI.DataField',
+                Value : date,
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : Rating,
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : User,
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : ReviewText,
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : HelpFul,
+            },
+        ],
+    },
+    UI.Facets  : [
+        {
+            $Type : 'UI.ReferenceFacet',
+            Target : '@UI.FieldGroup',
+            Label : 'Reviews',
         },
     ],
     UI.DataPoint #Rating : {
